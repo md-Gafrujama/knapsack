@@ -1,0 +1,164 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knapsack Problem</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script
+      src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"
+      type="text/javascript"
+    ></script>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/3/39/Identity_graph2.svg"
+    />
+    <script charset="utf-8" src="knapsack.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm"
+    >
+      <div class="container">
+        <!-- Brand Name -->
+        <a class="navbar-brand fw-bold" href="index.html">Greedy Techniques</a>
+
+        <!-- Toggle Button for Small Screens -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <!-- Active Link -->
+            <li class="nav-item">
+              <a class="nav-link active text-uppercase" href="knapsack.html"
+                >Knapsack Problem</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container section-gap">
+      <div class="jumbotron">
+        <h1>Fractional Knapsack</h1>
+        <p class="lead">About the algorithm:</p>
+        <hr />
+        <p>
+          Given weights and values of n items, we need to put these items in a
+          knapsack of capacity W to get the maximum total value in the knapsack.
+          <br />
+          In the 0-1 Knapsack problem, we are not allowed to break items. We
+          either take the whole item or don’t take it.
+        </p>
+        <hr />
+        <h3>Time Complexity:O(nlogn)</h3>
+      </div>
+    </section>
+
+    <section>
+      <div class="container mb-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <!-- Input Card -->
+            <div class="card shadow-sm bg-light">
+              <h5 class="card-header bg-primary text-white">
+                Knapsack Problem - Input
+              </h5>
+              <div class="card-body">
+                <!-- Capacity Input -->
+                <div class="form-group mb-4">
+                  <label for="capacity" class="form-label">Capacity:</label>
+                  <input
+                    required
+                    name="capacity"
+                    type="text"
+                    class="form-control"
+                    id="capacity"
+                    placeholder="Enter Capacity of Knapsack"
+                    maxlength="50"
+                  />
+                </div>
+                <!-- Item Table -->
+                <div class="form-group">
+                  <table
+                    class="table table-bordered text-center"
+                    id="item-table"
+                  >
+                    <thead class="table-secondary">
+                      <tr>
+                        <th>Name</th>
+                        <th>Profit</th>
+                        <th>Weight</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+                <!-- Buttons -->
+                <div class="d-flex justify-content-between">
+                  <button class="btn btn-info" id="addbutton" type="submit">
+                    Add Item
+                  </button>
+                  <button class="btn btn-success" id="gobutton" type="submit">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Output Card -->
+          <div class="col-lg-8 mt-5">
+            <div class="card shadow-sm bg-light">
+              <h5 class="card-header bg-success text-white">
+                Knapsack Problem - Output
+              </h5>
+              <div class="card-body">
+                <p class="mb-2">
+                  Your final knapsack contains:
+                  <span id="final_knapsack" class="fw-bold"></span>
+                </p>
+                <p>
+                  Your final profit is:
+                  <span id="final_profit" class="fw-bold"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional: Adding Bootstrap for responsive and aesthetic purposes -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </body>
+</html>
