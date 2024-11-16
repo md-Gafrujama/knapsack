@@ -89,7 +89,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👥 Authors
 
-- Your Name - [@yourusername](https://github.com/yourusername)
+- Your Name - [@yourusername](https://github.com/md-Gafrujama)
 
 ## 🙏 Acknowledgments
 
